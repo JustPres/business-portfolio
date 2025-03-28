@@ -45,137 +45,62 @@
             background-clip: text;
             color: transparent;
         }
-        
-    #profileModal .neu-card {
-        background: #e0e5ec;
-        box-shadow: 20px 20px 60px #bec3c9,
-                    -20px -20px 60px #ffffff;
-        animation: modalEnter 0.3s ease-out;
-    }
-    
-    @keyframes modalEnter {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
     </style>
 </head>
 <body class="bg-[#e0e5ec] font-['Poppins'] min-h-screen">
-     
-    <nav class="neu-light fixed w-full z-50 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <!-- Logo with click handler -->
-            <button onclick="toggleProfile()" class="neu-button rounded-full p-3 hover:transform hover:scale-105 transition-transform">
-                <span class="text-xl font-bold gradient-text">JL</span>
-            </button>
-            <div class="space-x-8 hidden md:flex">
+    <!-- components/nav.html -->
+<nav class="neu-light fixed w-full z-50 py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <a href="index.html" class="neu-button rounded-full p-3">
+            <span class="text-xl font-bold gradient-text">JL</span>
+        </a>
+        <div class="space-x-8 hidden md:flex">
             <a href="service.html" class="neu-button px-6 py-2 rounded-full hover:transform hover:scale-105">Services</a>
             <a href="work.html" class="neu-button px-6 py-2 rounded-full hover:transform hover:scale-105">Work</a>
             <a href="index.html" class="neu-button px-6 py-2 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:shadow-lg">Contact</a>
         </div>
     </div>
-    </nav>
-    <!-- Navigation -->
-    <div id="profileModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm">
-        <div class="neu-card rounded-3xl p-8 max-w-md mx-4 relative">
-            <button onclick="toggleProfile()" class="absolute top-4 right-4 text-gray-600 hover:text-purple-500">
-                ✕
-            </button>
-            <div class="text-center">
-                <div class="neu-pressed w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span class="text-2xl font-bold gradient-text">JL</span>
-                </div>
-                <h2 class="text-2xl font-bold mb-4 gradient-text">Justine Lopez</h2>
-                <p class="text-gray-600 mb-4">
-                    Digital Portfolio Architect<br>
-                    BSIT Student | St. Dominic College of Asia
-                </p>
-                <div class="space-y-2">
-                    <p class="text-sm text-gray-600">Specializing in:</p>
-                    <p class="text-purple-500">✓ Business Portfolio Design</p>
-                    <p class="text-blue-500">✓ Personal Branding Solutions</p>
-                    <p class="text-emerald-500">✓ Modern Web Experiences</p>
-                </div>
+</nav>
+
+  <!-- Services Content -->
+  <section class="pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-6xl">
+        <div class="neu-card rounded-3xl p-8 mb-12 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Premium Services</h1>
+            <p class="text-gray-600">Tailored solutions for professional success</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Business Portfolio Service -->
+            <div class="neu-card rounded-3xl p-8">
+                <div class="neu-pressed w-full h-48 rounded-xl mb-6"></div>
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Business Portfolios</h2>
+                <ul class="text-gray-600 space-y-4 mb-6">
+                    <li>✓ Corporate Brand Integration</li>
+                    <li>✓ Team Collaboration Features</li>
+                    <li>✓ Analytics Dashboard</li>
+                    <li>✓ Multi-user Access</li>
+                </ul>
+                <a href="#contact" class="neu-button px-6 py-3 rounded-full">Request Proposal</a>
+            </div>
+
+            <!-- Personal Portfolio Service -->
+            <div class="neu-card rounded-3xl p-8">
+                <div class="neu-pressed w-full h-48 rounded-xl mb-6"></div>
+                <h2 class="text-3xl font-bold mb-4 gradient-text">Personal Portfolios</h2>
+                <ul class="text-gray-600 space-y-4 mb-6">
+                    <li>✓ AI-Powered Optimization</li>
+                    <li>✓ Social Media Integration</li>
+                    <li>✓ Mobile-First Design</li>
+                    <li>✓ Continuous Updates</li>
+                </ul>
+                <a href="#contact" class="neu-button px-6 py-3 rounded-full">View Packages</a>
             </div>
         </div>
     </div>
-    
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-6">
-        <div class="container mx-auto max-w-6xl text-center">
-            <div class="neu-card rounded-3xl p-12 mb-12">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">
-                    Transform Your Digital Presence
-                </h1>
-                <p class="text-gray-600 mb-8 text-xl">
-                    Modern portfolio solutions for the digital age
-                </p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="neu-card rounded-3xl p-8">
-                    <h2 class="text-3xl font-bold mb-4 gradient-text">Business Portfolios</h2>
-                    <p class="text-gray-600 mb-6">Corporate-grade solutions with analytics</p>
-                    <button class="neu-button px-8 py-3 rounded-full">Learn More</button>
-                </div>
-                <div class="neu-card rounded-3xl p-8">
-                    <h2 class="text-3xl font-bold mb-4 gradient-text">Personal Portfolios</h2>
-                    <p class="text-gray-600 mb-6">AI-enhanced personal branding</p>
-                    <button class="neu-button px-8 py-3 rounded-full">View Samples</button>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
-    <!-- Services Section -->
-    <section class="py-20 px-6">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-16 gradient-text">Why Choose Us</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="neu-card rounded-3xl p-6 text-center">
-                    <div class="neu-pressed w-16 h-16 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                        💎
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Premium Quality</h3>
-                    <p class="text-gray-600">Industry-leading design standards</p>
-                </div>
-                <div class="neu-card rounded-3xl p-6 text-center">
-                    <div class="neu-pressed w-16 h-16 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                        🚀
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Fast Delivery</h3>
-                    <p class="text-gray-600">Average 7-day turnaround</p>
-                </div>
-                <div class="neu-card rounded-3xl p-6 text-center">
-                    <div class="neu-pressed w-16 h-16 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                        🔒
-                    </div>
-                    <h3 class="text-xl font-semibold mb-4">Secure Hosting</h3>
-                    <p class="text-gray-600">SSL & GDPR compliant</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact" class="py-20 px-6">
-        <div class="container mx-auto max-w-xl">
-            <div class="neu-card rounded-3xl p-8 text-center">
-                <h2 class="text-3xl font-bold mb-6 gradient-text">Start Your Project</h2>
-                <p class="text-gray-600 mb-8">Let's create something extraordinary together</p>
-                <a href="mailto:your@email.com" class="neu-button px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:shadow-lg inline-block">
-                    Email Me Now
-                </a>
-            </div>
-        </div>
-    </section>
-    
-
-    <!-- components/footer.html -->
+<!-- components/footer.html -->
 <footer class="py-12 px-6 mt-20">
     <div class="container mx-auto max-w-6xl">
         <div class="neu-card rounded-3xl p-8">
@@ -215,20 +140,5 @@
         </div>
     </div>
 </footer>
-<script>
-    function toggleProfile() {
-        const modal = document.getElementById('profileModal');
-        modal.classList.toggle('hidden');
-        document.body.classList.toggle('overflow-hidden');
-        
-        // Close modal when clicking outside
-        modal.addEventListener('click', (e) => {
-            if(e.target === modal) toggleProfile()
-        });
-    }
-    </script>
-    
-   
-    </style>
 </body>
 </html>

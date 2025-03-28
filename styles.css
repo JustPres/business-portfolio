@@ -1,0 +1,88 @@
+/* Neumorphism Custom Styles & Luxury Palette */
+:root {
+    --neuBg: #e0e0e0;         /* Light grey background for neumorphism */
+    --neuText: #333333;       /* Dark text for contrast */
+    --neuShadowDark: rgba(0, 0, 0, 0.2);
+    --neuShadowLight: rgba(255, 255, 255, 0.7);
+    --gold: #D4AF37;          /* Gold accent for focus/hover effects */
+    --goldDark: #b4972a;
+  }
+  
+  /* Base Fonts */
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Global Background & Text */
+  body {
+    background: var(--neuBg);
+    color: var(--neuText);
+  }
+  
+  /* Neumorphic Card */
+  .neumorphic-card {
+    background: var(--neuBg);
+    box-shadow: 8px 8px 16px var(--neuShadowDark),
+                -8px -8px 16px var(--neuShadowLight);
+  }
+  
+  /* Neumorphic Button */
+  .neumorphic-btn {
+    background: var(--neuBg);
+    box-shadow: inset 2px 2px 4px var(--neuShadowDark),
+                inset -2px -2px 4px var(--neuShadowLight);
+    transition: box-shadow 0.3s ease;
+  }
+  .neumorphic-btn:hover {
+    box-shadow: 4px 4px 8px var(--neuShadowDark),
+                -4px -4px 8px var(--neuShadowLight);
+  }
+  
+  /* Neumorphic Navbar */
+  .neumorphic-nav {
+    background: var(--neuBg);
+    box-shadow: 4px 4px 8px var(--neuShadowDark),
+                -4px -4px 8px var(--neuShadowLight);
+  }
+  
+  /* Navbar Links with Underline Hover Animation */
+  .nav-link {
+    position: relative;
+    color: var(--neuText);
+    transition: color 0.3s ease;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Custom Focus Ring */
+  :focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--gold);
+  }
+  
+  /* Fade-In Animation for Sections */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out forwards;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  
